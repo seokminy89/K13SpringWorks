@@ -1,0 +1,41 @@
+package com.kosmo.springlegacy;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/*
+사용자의 요청을 제일 먼저 받는 DispatcherServlet은 기본패키지로 지정된
+com.kosmo.springlegacy를 스캔하여 컨트롤러 클래스를 찾아낸다.
+
+@Controller
+	: 해당 클래스를 컨트롤러로 사용하고 싶을때 클래스명 앞에 선언한다.
+		패키지를 스캔할 때 해당 어노테이션이 있는 클래스를 찾아서
+		요청을 전달한다.
+		
+@RequestMapping
+	: 요청명을 매핑한다. 요청명은 서블릿과 마찬가지로 컨택스트루트를 
+	제외한 나머지 경로명으로 이루어진다.
+	요청명의 매핑정보로 메서드를 호출하므로 메서드명은 큰 의미가 없다.
+	개발자가 구분하기 좋은 정도의 이름으로 설정하면 된다.
+
+*/
+@Controller
+public class FormController {
+	
+	@RequestMapping("/form/servletRequest")
+	public String loginMember(HttpServletRequest req, Model model) {
+		
+		String id = req.getParameter("id");
+		String pw = req.getParameter("pw");
+		
+		model.addAttribute("id", id);
+		model.addAttribute("pw", pw);
+		model.addAttribute("message", "로그인 정보가 전달되었습니다.");
+		
+		return "01Form/servletRequest";
+	}
+
+}

@@ -1,0 +1,11 @@
+package common;
+
+public class StudentDTO {
+	//멤버변수
+	private String name;
+	private String age;
+	private String gradeNum;
+	private String classNum;
+	
+	
+}

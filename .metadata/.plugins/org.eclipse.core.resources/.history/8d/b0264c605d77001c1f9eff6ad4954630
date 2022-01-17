@@ -1,0 +1,10 @@
+package common;
+
+public class MemberDTO {
+	private String id;
+	private String pw;
+	private String name;
+	private String email;
+	//생성자 필요없음
+	//getter/setter생성
+}

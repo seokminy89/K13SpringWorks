@@ -1,0 +1,22 @@
+package di;
+
+public class Circle {
+	Point point;
+	int radian;
+	
+	public Point getPoint() {
+		return point;
+	}
+	public void setPoint(Point point) {
+		this.point = point;
+	}
+	
+	public int getRadian() {
+		return radian;
+	}
+	
+	public void setRadian(Point point) {
+		this.point = point;
+	}
+	
+}

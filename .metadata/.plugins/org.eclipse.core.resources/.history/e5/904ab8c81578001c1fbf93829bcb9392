@@ -1,0 +1,10 @@
+package di;
+
+public class Circle {
+	Point point;
+	int radian;
+	
+	public Point getPoint() {
+		return point;
+	}
+}

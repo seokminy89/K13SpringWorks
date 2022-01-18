@@ -1,0 +1,15 @@
+package di;
+
+
+class Persons{
+	String name;
+	int age;
+	
+	public Persons() {
+		//Public 생성자 정의
+	}
+}
+public class DiTest {
+
+	
+}

@@ -1,0 +1,26 @@
+package di;
+
+
+class Persons{
+	String name;
+	int age;
+	
+	public Persons() {
+		//Public 생성자 정의
+	}
+}
+public class DiTest {
+
+	public static void aPerson() {
+		Persons persons1 = new Persons();
+		persons1.age = 34;
+		persons1.name = "윤석민"
+	}
+	
+	public static void bPerson() {
+		
+	}
+	
+	
+	
+}

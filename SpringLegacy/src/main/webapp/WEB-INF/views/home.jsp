@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="/springlegacy/static/bootstrap5.1.3/css/bootstrap.css" />
 <!-- jQuery 코어 -->
 <script src="/springlegacy/resources/jquery/jquery-3.6.0.js"></script>
+<style>
+	h3{margin-top: 30px;}
+</style>
 </head>
 <body>
 <div class="container">
@@ -76,7 +79,54 @@
 		</a>
 	</li>
 	
+	<!-- 컨트롤러 : ValidateController.java -->
+	<h3>폼 데이터 검증하기 - Validator</h3>
+	<li>
+		<a href="./validate/memberRegist.do" target="_blank">
+			회원가입 바로가기
+		</a>
+	</li>
 	
+	<!-- 컨트롤러 : EnvironmentController.java -->
+	<h3>Environment 객체를 이용한 외부파일 참조하기</h3>
+	<li>
+		<a href="environment/main1" target="_blank">
+			외부파일 참조하기 1(Environment 객체 사용)
+		</a>
+	</li>
+	
+	<!-- 컨트롤러 : DIController.java -->
+	<h3>DI(Dependency Injection) : 의존성 주입</h3>
+	<li>
+		<a href="di/mydi1.do" target="_blank">
+			XML설정파일을 통한 빈 생성1(생성자와 setter)
+		</a>
+	</li>
+	
+	<li>
+		<a href="di/mydi2.do" target="_blank">
+			XML설정파일을 통한 빈 생성2(다양한 멤버변수)
+		</a>
+	</li>
+	
+	<li>
+		<a href="di/mydi3.do" target="_blank">
+			어노테이션을 통한 빈 생성
+		</a>
+	</li>
+	
+	<h3>파일업로드</h3>
+	<li>
+		<a href="./fileUpload/uploadPath.do" target="_blank">
+			upload폴더의 물리적 경로 확인하기
+		</a>
+	</li>
+	
+	<li>
+		<a href="./fileUpload/uploadForm.do" target="_blank">
+			파일 업로드 폼
+		</a>
+	</li>
 </div>
 </body>
 </html>

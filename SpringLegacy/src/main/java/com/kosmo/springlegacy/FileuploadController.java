@@ -124,4 +124,20 @@ public class FileuploadController {
 		
 		return "06FileUpload/uploadAction";
 	}
+	
+	@RequestMapping("/fileUpload/uploadList.do")
+	public String uploadList(HttpServletRequest req, Model model){
+		
+		String path = req.getSession().getServletContext().getRealPath("/resources/upload");
+		File file = new File(path);
+		File[] fileArray = file.listFiles();
+		Map<String,	Integer> fileMap = new HashMap<String, Integer>();
+		for(File f : fileArray)
+		{
+			fileMap.put(f.getName(), (int)Math.ceil(f.length()/1024.0));
+		}
+		
+		model.addAttribute("fileMap",fileMap);
+		return "06FileUpload/uploadList";
+	}
 }

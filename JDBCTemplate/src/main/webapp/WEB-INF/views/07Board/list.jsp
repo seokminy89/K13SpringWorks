@@ -22,7 +22,7 @@
 		<td align="center">
 			<select name="searchColumn">
 				<option value="title">제목</option>
-				<option value="content">내용</option>
+				<option value="contents">내용</option>
 			</select>
 			<input type="text" name="searchWord" />
 			<input type="submit" value="검색하기" />
@@ -70,8 +70,8 @@
 								&nowPage=${nowPage}">${row.title}</a>
 						</td>
 						<td class="text-center">${row.name }</td>
-						<td class="text-center">${row.postdate }</td>
 						<td class="text-center">${row.hits }</td>
+						<td class="text-center">${row.postdate }</td>
 						<!-- <td class="text-center">--</td> -->
 					</tr>
 					<!-- 리스트반복끝 -->
@@ -79,6 +79,15 @@
 			</c:otherwise>
 		</c:choose>
 	</table>
+	<!-- 페이지번호 -->
+	<table border="1" width="90%">
+		<tr>
+			<td align="center">
+				${pagingImg }
+			</td>
+		</tr>
+	</table>
+	
 </div>
 
 </body>

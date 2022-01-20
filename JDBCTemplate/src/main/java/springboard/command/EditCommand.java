@@ -9,28 +9,23 @@ import org.springframework.ui.Model;
 import springboard.model.JDBCTemplateDAO;
 import springboard.model.SpringBbsDTO;
 
-public class ViewCommand implements BbsCommandImpl{
+public class EditCommand implements BbsCommandImpl{
 	
 	@Override
 	public void execute(Model model) {
 		
-		//요청 일괄받기
+		//Model에 저장된 request내장 객체를 얻어온다.
 		Map<String, Object> paramMap = model.asMap();
 		HttpServletRequest req = (HttpServletRequest)paramMap.get("req");
 		
-		//폼값 받기
+		//일련번호를 파라미터로 받은 후
 		String idx = req.getParameter("idx");
-		String nowPage = req.getParameter("nowPage");
 		
-		//DAO, DTO객체 생성 및 상세보기 처리를 위한 메서드 호출
 		JDBCTemplateDAO dao = new JDBCTemplateDAO();
-		SpringBbsDTO dto = new SpringBbsDTO();
-		dto = dao.view(idx);
 		
-		//줄바꿈 처리 위해 <br/>로 변경
-		dto.setContents(dto.getContents().replace("\r\n", "<br/>"));
-		model.addAttribute("viewRow", dto);
-		model.addAttribute("nowPage", nowPage);
+		//기존의 게시물을 얻어온다.
+		SpringBbsDTO dto = dao.view(idx);
+		model.addAttribute("viewRow",dto);
+		//dao.close();
 	}
-
 }

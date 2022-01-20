@@ -126,12 +126,13 @@
 			</repository>
 		</repositories> -->
 		
+		<!-- JDBC설정을 위한 의존설정(오라클 드라이버) -->
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0.3</version>
 		</dependency>
-
+		<!-- JDBCTemplate을 사용하기 위한 의존설정 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>

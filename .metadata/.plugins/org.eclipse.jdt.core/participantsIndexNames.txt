@@ -15,6 +15,8 @@ C:\02WorkspaceYSM\K13SpringWorks\.metadata\.plugins\org.eclipse.jst.jsp.core\jsp
 \SpringLegacy\src\main\java
 C:\02WorkspaceYSM\K13SpringWorks\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1571780410.index
 \SpringLegacy\src\main\java
+C:\02WorkspaceYSM\K13SpringWorks\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1014681177.index
+\Mybatis\src\main\java
 C:\02WorkspaceYSM\K13SpringWorks\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\35133580.index
 \JDBCTemplateAuto\src\main\java
 C:\02WorkspaceYSM\K13SpringWorks\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\842146591.index

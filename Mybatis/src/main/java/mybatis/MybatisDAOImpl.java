@@ -1,6 +1,8 @@
 package mybatis;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
@@ -17,11 +19,20 @@ import org.springframework.stereotype.Service;
 public interface MybatisDAOImpl {
 	
 	/*
-	방명록 1차 버전에서 사용하는 메서드
+	방명록 1차 버전에서 사용하는 메서드 (검색기능 추가 전)
 	게시물 수 카운트와 목록에 출력할 게시물 가져오기
 	 */
 	public int getTotalCount(); //파라미터 없음
 	public ArrayList<MyBoardDTO> listPage(int s, int e); //파라미터 2개 있음
+	
+	
+	/*
+	방명록 2차버전에서 사용할 메서드 (검색기능 추가 )
+	파라미터를 저장한 DTO객체를 매개변수로 사용한다.
+	즉, Mapper로 DTO를 통해 파라미터를 전달한다.
+	 */
+	public int getTotalCountSearch(ParameterDTO parameterDTO); 
+	public ArrayList<MyBoardDTO> listPageSearch(ParameterDTO parameterDTO);
 	
 	/*
 	@param 어노테이션을 통해 파라미터를 전달하면 Mapper에서는 별칭을 통해
@@ -37,4 +48,10 @@ public interface MybatisDAOImpl {
 	public int modify(MyBoardDTO myBoardDTO);
 	//삭제처리
 	public int delete(String idx, String id);
+	
+	//Map컬렉션 사용을 위한 추상메서드
+	public ArrayList<MyBoardDTO> hashMapUse(Map<String, String> hMap);
+	//List 컬렉션 사용을 위한 추상메서드
+	public ArrayList<MyBoardDTO> arrayListUse(List<String> aList);
+	
 }

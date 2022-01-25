@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="Mybatis"/>
+<aop-project name="TransactionTemplate"/>
+<aop-project name="Transaction"/>
 <aop-project name="SpringLegacy"/>
 <aop-project name="JDBCTemplateAuto"/>
 <aop-project name="JDBCTemplate"/>

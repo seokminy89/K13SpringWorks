@@ -15,12 +15,14 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="security:"/>
 			<item value="sqSession"/>
 			<item value="sq"/>
 			<item value="donowPage"/>
 			<item value="dono"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

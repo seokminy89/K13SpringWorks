@@ -6,4 +6,5 @@
 <aop-project name="SpringLegacy"/>
 <aop-project name="JDBCTemplateAuto"/>
 <aop-project name="JDBCTemplate"/>
+<aop-project name="Security"/>
 </aop-reference-model>

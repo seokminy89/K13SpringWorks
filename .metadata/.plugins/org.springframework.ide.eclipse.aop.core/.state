@@ -2,9 +2,10 @@
 <aop-reference-model>
 <aop-project name="Mybatis"/>
 <aop-project name="TransactionTemplate"/>
+<aop-project name="Websocket"/>
 <aop-project name="Transaction"/>
-<aop-project name="SpringLegacy"/>
-<aop-project name="JDBCTemplateAuto"/>
 <aop-project name="JDBCTemplate"/>
+<aop-project name="JDBCTemplateAuto"/>
+<aop-project name="SpringLegacy"/>
 <aop-project name="Security"/>
 </aop-reference-model>

@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> <!-- 얘가 있으면 오류 없으면 정상작동 이유가 뭔지 물어보기. -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -26,12 +26,12 @@
 	</button>
 </form> 
 
-<!--  
+<%--  
 	웹 애플리케이션에 스프링 시큐리티를 적용할 경우 <form를 사용할때는
 	인증이 필요없는 페이지에서도 반드시 <form:form태그 라이브러리를 사용해야한다.
 	해당 태그를 사용하면 _csrf라는 hidden 박스가 자동으로 삽입되고,
 	시큐리티는 이 값을 사용하여 정상적으로 내부에서 전송된 폼값인지 확인한다.
--->
+--%>
 <!-- 
 정상적으로 인증절차 없이 폼값 전송됨. 
 -->

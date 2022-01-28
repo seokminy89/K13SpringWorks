@@ -36,7 +36,7 @@
 		<beans:property name="password" value="1234" />
 	</beans:bean>
 	
-	
+	<!-- Mybatis 사용을 위한 빈 생성 -->
 	<beans:bean id="sqlSessionFactory" 
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 데이터 근원지에 대한 빈 -->

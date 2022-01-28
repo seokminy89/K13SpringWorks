@@ -155,7 +155,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\02WorkspaceYSM\K13SpringWorks\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\02WorkspaceYSM\K13SpringWorks\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Security" path="/security" reloadable="true" source="org.eclipse.jst.jee.server:Security"/><Context docBase="C:\02WorkspaceYSM\K13SpringWorks\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Websocket" path="/websocket" reloadable="true" source="org.eclipse.jst.jee.server:Websocket"/></Host>
+      <Context docBase="C:\02WorkspaceYSM\K13SpringWorks\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\02WorkspaceYSM\K13SpringWorks\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JSONRestAPI" path="/jsonrestapi" reloadable="true" source="org.eclipse.jst.jee.server:JSONRestAPI"/><Context docBase="C:\02WorkspaceYSM\K13SpringWorks\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Websocket" path="/websocket" reloadable="true" source="org.eclipse.jst.jee.server:Websocket"/></Host>
     </Engine>
   </Service>
 </Server>

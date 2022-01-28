@@ -10,7 +10,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <script>
+//채팅창 오픈을 위한 함수
 function chatWin(skin){
+	//채팅 아이디(대화명)가 입력되었는지 확인한다.
     var id = document.getElementById("chat_id");
     if(id.value==''){
         alert('채팅 닉네임을 입력 후 채팅창을 열어주세요');

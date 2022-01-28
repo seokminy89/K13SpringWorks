@@ -20,5 +20,6 @@
 			<a href="./Notification/03SendMain.do" target="_black">쪽지보내기</a>
 		</li>
 	</ul>
+	
 </body>
 </html>

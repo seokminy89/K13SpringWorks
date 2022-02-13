@@ -9,4 +9,5 @@
 <aop-project name="JDBCTemplateAuto"/>
 <aop-project name="SpringLegacy"/>
 <aop-project name="Security"/>
+<aop-project name="My_FreeP_project"/>
 </aop-reference-model>

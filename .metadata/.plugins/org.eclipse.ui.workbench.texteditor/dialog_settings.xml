@@ -15,6 +15,9 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="reg"/>
+			<item value="regist"/>
+			<item value="&amp;#39"/>
 			<item value="security:"/>
 			<item value="sqSession"/>
 			<item value="sq"/>
@@ -22,6 +25,7 @@
 			<item value="dono"/>
 		</list>
 		<list key="replacehistory">
+			<item value="&apos;"/>
 			<item value=""/>
 		</list>
 	</section>

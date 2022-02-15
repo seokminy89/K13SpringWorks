@@ -56,7 +56,7 @@
                                 <a href="javascript:UI.layerPopUp({selId: '#pop-accredit'});" class="notice-text">본인인증 안내</a>
                                 <strong class="title">반갑습니다.</strong>
                                 <p>
-                                                    도미노피자 회원가입을 위해서는 본인인증이 필요합니다.<br>
+                                                    FreeP 회원가입을 위해서는 본인인증이 필요합니다.<br>
                                                     회원가입은 아동의 개인정보 보호를 위해 만 14세 이상만 가능합니다.
                                 </p>
                                 <div class="btn-wrap">

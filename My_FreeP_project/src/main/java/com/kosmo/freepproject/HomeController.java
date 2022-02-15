@@ -37,14 +37,6 @@ public class HomeController {
 	@RequestMapping("index.do")
 	public String Index() {return "index";}
 	
-	@RequestMapping("/member/login.do")
-	public String login() {return "member/login";}
-	@RequestMapping("/member/regist1.do")
-	public String regStep1() {return "member/regStep1";}
-	@RequestMapping("/member/regist2.do")
-	public String regStep2() {return "member/regStep2";}
-	@RequestMapping("/member/regist3.do")
-	public String regStep3() {return "member/regStep3";}
 	
 	@RequestMapping("/mypage/myMain.do")
 	public String myMain() {return "mypage/myMain";}

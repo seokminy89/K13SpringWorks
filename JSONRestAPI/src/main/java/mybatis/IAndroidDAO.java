@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public interface IAndroidDAO {
 
-	public ArrayList<MemberVO> memberList(ParameterDTO parameterDTO);
+	public ArrayList<MemberVO> memberList();
 	
 	public MemberVO memberLogin(MemberVO memberVO );
 }

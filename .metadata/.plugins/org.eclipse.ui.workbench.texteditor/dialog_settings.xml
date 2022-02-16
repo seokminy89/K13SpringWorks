@@ -13,8 +13,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Member"/>
+		<item key="selection" value="textarea"/>
 		<list key="findhistory">
+			<item value="textarea"/>
+			<item value="text"/>
 			<item value="member"/>
 			<item value="reg"/>
 			<item value="regist"/>

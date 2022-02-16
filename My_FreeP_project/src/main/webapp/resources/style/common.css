@@ -254,9 +254,9 @@ button:hover {
 
 input[type="radio"],
 input[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  /* -webkit-appearance: none; */
+  /* -moz-appearance: none;
+  appearance: none; */
 }
 
 ::-webkit-input-placeholder {

@@ -27,18 +27,23 @@
     	.text_reg{
     		width: 500px;
     		height: 300px;
-    		margin-top :20px
+    		margin-top :25px;
     	}
+    	button {
+		  margin-top: 15px;
+		}
+    	
     </style>
     <script>
 	function ckCheck(Chk) {
-	   var chk1=document.Chk.agreement1.checked;
+	   var chk1=document.Chk.chk_ds_fl.checked;
 	   if(chk1==""){
 	    alert('약관에동의해 주세요');
-	    Chk.agreement1.focus();
+	    Chk.chk_ds_fl.focus();
 	   
 	    return false;
 	   }
+	   console.log("chk1:",chk1);
 	}
 	</script>
 </head>
@@ -73,7 +78,6 @@
                                 </ul>
                             </div>
                             <div class="info-text-wrap">
-                                <a href="javascript:UI.layerPopUp({selId: '#pop-accredit'});" class="notice-text">본인인증 안내</a>
                                 <strong class="title">반갑습니다.</strong>
                                 <div style="white-space:nowrap ;">
 	                                <textarea class="text_reg" rows="30" cols="30" name="contents" readonly>
@@ -92,11 +96,16 @@
 	                                
 	                                <div class="btn-wrap">
 	                                	
-	                                	<p><input type="checkbox" name="agreement1" value="1"  checked="checked">이용약관과 개인정보취급방침에 동의합니다.</p>
+	                                	<!-- <p><input type="checkbox" id="check_reg" name="agreement1" value="1" >이용약관과 개인정보취급방침에 동의합니다.</p> -->
+	                                    <div class="chk-box v4">
+                                            <input type="checkbox" id="chk_ds_fl" name="chk_ds_fl" value="Y">
+                                            <label class="checkbox" for="chk_ds_fl"></label>
+                                            <label for="chk_ds_fl">이용약관과 개인정보취급방침에 동의합니다.</label>
+                                        </div>
 	                                	
-	                                    <button type="submit" class="btn-type v4">가입하기</button>
 	                                    
 	                                </div>
+	                                    <button type="submit" class="btn-type v4" >가입하기</button>
                                 </form:form>
                             </div>
                         </div>

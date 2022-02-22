@@ -47,7 +47,7 @@
                         <div class="join-step3">
                             <div class="step-list">
                                 <ul>
-                                    <li>01 본인인증</li>
+                                    <li>01 약관동의</li>
                                     <li>02 개인정보입력</li>
                                     <li class="active">03 가입완료</li>
                                 </ul>

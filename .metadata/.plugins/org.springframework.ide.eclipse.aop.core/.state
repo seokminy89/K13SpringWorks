@@ -5,9 +5,9 @@
 <aop-project name="TransactionTemplate"/>
 <aop-project name="Websocket"/>
 <aop-project name="Transaction"/>
-<aop-project name="SpringLegacy"/>
 <aop-project name="JDBCTemplate"/>
 <aop-project name="JDBCTemplateAuto"/>
+<aop-project name="SpringLegacy"/>
 <aop-project name="Security"/>
 <aop-project name="My_FreeP_project"/>
 </aop-reference-model>

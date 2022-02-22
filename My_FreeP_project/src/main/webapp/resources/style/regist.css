@@ -1420,9 +1420,9 @@ input[readonly] {
 
 input[type="radio"], input[type="checkbox"] {
   /* -webkit-appearance: none; */
-  -moz-appearance: none;
-  -webkit-appearance: none;
-          appearance: none;
+  /* -moz-appearance: none; */
+  /* -webkit-appearance: none; */
+       /* appearance: none; */
 }
 
 .join-step2 .myinfo-wrap dl dd .form.agree > .chk-box {

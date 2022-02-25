@@ -6,7 +6,7 @@
             <!-- 로고 -->
             <a href="/freepproject/index.do" class="btn-logo">
                 <img src="/freepproject/images/01brand/brand_logo_type007.png" alt="logo" style="width: 130px;">
-                <h1 class="hidden">도미노피자</h1>
+                <h1 class="hidden">FreeP피자</h1>
             </a>
             <!-- 로그인/회원가입 -->
             <div class="util-nav">

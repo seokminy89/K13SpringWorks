@@ -35,6 +35,9 @@ public interface MemberImpl {
 	public int coupon(MemberVO memberVO);
 	
 	
+
+	
+	
 	//기존 게시물의 내용을 읽어오기 위한 메서드
 	public MemberVO view(ParameterDTO parameterDTO);
 	

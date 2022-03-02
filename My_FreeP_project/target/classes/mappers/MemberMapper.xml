@@ -62,7 +62,6 @@
   	</select>
 	
 	
-	
 	<select id="view" resultType="member.MemberVO" parameterType="util.ParameterDTO">
 		SELECT * FROM member WHERE m_code=#{m_code}
 	</select>

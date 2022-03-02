@@ -8,11 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.Value;
@@ -20,6 +22,8 @@ import member.MemberImpl;
 import member.MemberVO;
 import menu.MenuImpl;
 import menu.MenuVO;
+import net.nurigo.java_sdk.api.Message;
+import net.nurigo.java_sdk.exceptions.CoolsmsException;
 import util.PagingUtil_mem;
 import util.ParameterDTO;
 
@@ -177,7 +181,6 @@ public class MemberController {
 	@RequestMapping(value="/member/regAction.do" , method = RequestMethod.POST)
 	public String regAction(Model model, HttpServletRequest req) {
 		
-		String phone = req.getParameter("hand_tel1")+"-"+req.getParameter("hand_tel2")+"-"+req.getParameter("hand_tel3");
 		String email = req.getParameter("email1")+"@"+req.getParameter("email2");
 		String address = req.getParameter("address")+" "+req.getParameter("address2");
 		
@@ -186,7 +189,7 @@ public class MemberController {
 		memberVO.setId(req.getParameter("id")); 
 		memberVO.setName(req.getParameter("name")); 
 		memberVO.setPass(req.getParameter("pass")); 
-		memberVO.setPhone(phone); 
+		memberVO.setPhone(req.getParameter("phone")); 
 		memberVO.setEmail(email);
 		memberVO.setZipcode(req.getParameter("zipcode"));
 		memberVO.setAddress(address); 
@@ -209,6 +212,53 @@ public class MemberController {
 		return result;
 		
 	}
+	
+	//휴대폰 본인인증
+	
+	 @ResponseBody 
+	 @RequestMapping(value = "/member/phoneCheck.do", method = RequestMethod.GET)
+	 public String sendSMS(@RequestParam("phone") String
+	 userPhoneNumber) { // 휴대폰 문자보내기 
+		 int randomNumber = (int)((Math.random()*(9999 - 1000 + 1)) + 1000);//난수 생성
+		 System.out.println(userPhoneNumber);
+		 certifiedPhoneNumber(userPhoneNumber,randomNumber); 
+		 return Integer.toString(randomNumber); 
+	 } 
+	 
+	//휴대폰 본인인증
+		
+	 public void certifiedPhoneNumber(String userPhoneNumber, int randomNumber) {
+	 String api_key = "NCSGOIQ67LAVMBIU"; 
+	 String api_secret = "JM35WZMCTAE0A5ZSAERCB9VACDIGKRAN"; 
+	 Message coolsms = new Message(api_key, api_secret); 
+	 
+	 // 4 params(to, from, type, text) are mandatory. must be filled
+	 HashMap<String, String> params = new HashMap<String, String>();
+	 params.put("to", userPhoneNumber); // 수신전화번호 
+	 params.put("from", "자신의 번호"); //발신전화번호. 테스트시에는 발신,수신 둘다 본인 번호로 하면 됨 
+	 params.put("type", "SMS");
+	 params.put("text", "[TEST] 인증번호는" + "["+randomNumber+"]" + "입니다."); // 문자 내용입력 
+	 params.put("app_version", "test app 1.2"); // application name and version
+	 
+	 try { 
+		 JSONObject obj = (JSONObject) coolsms.send(params);
+		 System.out.println(obj.toString()); 
+		 System.out.println("try영역");
+		 } 
+		 catch (CoolsmsException e) {
+		 System.out.println("catch영역");
+		 System.out.println(e.getMessage()); 
+		 System.out.println(e.getCode()); 
+		 
+		 }
+	  }
+	 
+	//로그인 페이지 매핑
+		@RequestMapping("/member/find.do")
+		public String find() {return "member/findidpw";}
+	 
+	
+	
 	//회원가입 완료 페이지로 이동
 	/*
 	 * @RequestMapping("/member/regist3.do") public String regStep3() {return

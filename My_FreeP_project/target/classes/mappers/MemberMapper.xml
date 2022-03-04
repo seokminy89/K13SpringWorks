@@ -60,6 +60,12 @@
   	<select id="idChk"  resultType="int">
   		SELECT COUNT(*) FROM member WHERE id = #{param1}
   	</select>
+  	
+  	
+  	<!-- 아이디 찾기 -->
+	<select id="find_id" parameterType="String" resultType="String">
+		SELECT id FROM member WHERE phone = #{phone}
+	</select>
 	
 	
 	<select id="view" resultType="member.MemberVO" parameterType="util.ParameterDTO">

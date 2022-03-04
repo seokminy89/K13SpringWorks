@@ -35,7 +35,8 @@ public interface MemberImpl {
 	public int coupon(MemberVO memberVO);
 	
 	
-
+	//아이디 찾기
+	public String find_id(String phone) throws Exception;
 	
 	
 	//기존 게시물의 내용을 읽어오기 위한 메서드

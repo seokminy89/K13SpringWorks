@@ -77,8 +77,8 @@
                                     <label for="idcheck">아이디저장</label>
                                 </div>
                                 <div class="btn-member-wrap" style="margin-bottom:20px">
-                                    <span><a href="./find.do">아이디 찾기</a></span>
-                                    <span id="pw"><a href="./find.do">비밀번호 찾기</a></span>
+                                    <span><a href="./findId.do">아이디 찾기</a></span>
+                                    <span id="pw"><a href="./findPw.do">비밀번호 찾기</a></span>
                                 </div>
                             </div>
                             

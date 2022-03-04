@@ -253,11 +253,30 @@ public class MemberController {
 		 }
 	  }
 	 
-	//로그인 페이지 매핑
-		@RequestMapping("/member/find.do")
-		public String find() {return "member/findidpw";}
-	 
+	//아이디 찾기 페이지 매핑
+	@RequestMapping("/member/findId.do")
+	public String findId() {return "member/findId";}
 	
+	//아이디 찾기 처리
+	@ResponseBody
+	@RequestMapping(value="/member/search_id.do", method = RequestMethod.GET)
+	public Map<String,Object> search_id(Model model, HttpServletRequest req) throws Exception{
+		String phone = (String) req.getParameter("phone");
+		String id = sqlSession.getMapper(MemberImpl.class).find_id(phone);
+		System.out.println(phone);
+		Map<String, Object> result = new HashMap<String, Object>();
+        result.put("id", id);
+		return result;
+		
+	}
+	 
+	//패스워드 찾기 페이지 매핑
+	@RequestMapping("/member/findPw.do")
+	public String findPw() {return "member/findPw";}
+	
+	//패스워드 변경하기 페이지 매핑
+	@RequestMapping("/member/pwChange.do")
+	public String pwChange() {return "member/pwChange";}
 	
 	//회원가입 완료 페이지로 이동
 	/*

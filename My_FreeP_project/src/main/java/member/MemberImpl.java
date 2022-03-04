@@ -38,6 +38,8 @@ public interface MemberImpl {
 	//아이디 찾기
 	public String find_id(String phone) throws Exception;
 	
+	//패스워드 수정
+	public int pwAction(MemberVO memberVO);
 	
 	//기존 게시물의 내용을 읽어오기 위한 메서드
 	public MemberVO view(ParameterDTO parameterDTO);

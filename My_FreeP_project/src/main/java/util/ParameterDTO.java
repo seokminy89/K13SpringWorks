@@ -11,6 +11,8 @@ public class ParameterDTO {
 	private String g_code;//상품구분
 	private String p_code;//상품코드
 	private String p_name;//상품이름
+	private String phone;//상품이름
+	private String pass;//상품이름
 	
 	//회원구분을 위한 변수
 	private String grade;

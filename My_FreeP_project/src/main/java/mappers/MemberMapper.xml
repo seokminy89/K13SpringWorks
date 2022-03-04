@@ -83,6 +83,13 @@
 			WHERE m_code=#{m_code}
 	</update>
 	
+	<!-- 패스워드 수정 -->
+	<update id="pwAction" parameterType="member.MemberVO">
+		UPDATE member 
+			SET  pass=#{pass}
+			WHERE phone=#{phone}
+	</update>
+	
 	
 	<delete id="delete">
 		DELETE FROM member WHERE m_code=#{m_code}

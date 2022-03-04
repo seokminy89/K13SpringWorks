@@ -274,9 +274,46 @@ public class MemberController {
 	@RequestMapping("/member/findPw.do")
 	public String findPw() {return "member/findPw";}
 	
+	
 	//패스워드 변경하기 페이지 매핑
 	@RequestMapping("/member/pwChange.do")
-	public String pwChange() {return "member/pwChange";}
+	public String pwChange(HttpServletRequest req, Model model) {
+		
+		String phone = req.getParameter("phone");
+		model.addAttribute("phone", phone);
+		
+		return "member/pwChange";
+	}
+	
+	
+	//패스워드 변경처리 
+	@RequestMapping("/member/pwAction.do")
+	public String pwAction(HttpServletRequest req, Model model) {
+		
+		
+		MemberVO memberVO = new MemberVO();
+		memberVO.setPass(req.getParameter("pass")); 
+		memberVO.setPhone(req.getParameter("phone")); 
+		
+		int result = sqlSession.getMapper(MemberImpl.class).pwAction(memberVO);
+		
+		if(result>0) {
+			model.addAttribute("msg","패스워드가 수정되었습니다.");
+			//return "member/myPwUpdate";
+			return "member/myPwUpdate";
+		}
+		else {
+			model.addAttribute("msg","패스워드 수정에 실패하였습니다.\\n가입 시 입력한 휴대폰 번호를 다시 확인해 주세요");
+	        
+	        return "member/myPwFail";
+		}
+		
+	}
+	
+	//패스워드 수정완료 페이지
+	//@RequestMapping("/member/myPwUpdate.do")
+	//public String myPwUpdate() {return "member/myPwUpdate";}
+	
 	
 	//회원가입 완료 페이지로 이동
 	/*

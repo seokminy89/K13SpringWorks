@@ -27,19 +27,26 @@
 <!-- js 라이브러리 영역 -->
 <script src="../js/jquery-3.6.0.js"></script>
 <script>
-
-		//전화번호를 입력
-		if(frm.phone.value==''){
-	        alert('전화번호를 입력하세요');
-	        frm.phone.focus();
-	        return false;
-	    }
-	    //인증번호를 입력
-		if(frm.phone2.value==''){
-	        alert('인증번호를 입력하세요');
-	        frm.phone2.focus();
-	        return false;
-	    }
+	var flag = 0;
+		function validateForm(frm){
+			
+			//전화번호를 입력
+			if(frm.phone.value==''){
+		        alert('전화번호를 입력하세요');
+		        frm.phone.focus();
+		        return false;
+		    }
+		    //인증번호를 입력
+			if(frm.phone2.value==''){
+		        alert('인증번호를 입력하세요');
+		        frm.phone2.focus();
+		        return false;
+		    }
+		    if(flag == 0){
+		    	alert("본인 인증 버튼을 눌러주세요.")
+		    	return false;
+		    }
+		}
 	    
 </script>
 
@@ -77,11 +84,11 @@ function phoneCheck() {
 							$("#phone").attr("autofocus",true); 
 				}else{ 
 					alert("전송된 인증번호를 입력해주세요."+data);
-					//$("#phone2").attr("disabled",false); 
-					//$("#phoneChk2").css("display","inline-block"); 
+					
 					$("#phone").attr("readonly",true); 
 					$("#phone2").attr("disabled",false); 
-					$("#phoneChk").attr("disabled",true); 
+					$("#phoneChk").attr("disabled",true);
+					$('#phone2').focus();
 					code2 = data; 
 				} 
 			} 
@@ -97,11 +104,11 @@ function phoneCheck2() {
 	else{
 		
 		if($("#phone2").val() == code2){ 
-			alert("인증에 성공했습니다.");
+			alert("인증에 성공했습니다, 패스워드를 변경해주세요.");
 			$("#phoneDoubleChk").val("true"); 
 			$("#phone2").attr("disabled",true); 
 			$("#passChage").show(); 
-			//비밀번호 찾기할 때 window.onload(비밀번호입력할새로만든jsp경로); location.href 둘중 하나 검색해서 해보기.
+			flag = 1;
 		}else{ 
 			alert("인증에 실패했습니다.");
 			$("#phoneDoubleChk").val("false"); 
@@ -162,7 +169,7 @@ function phoneCheck2() {
                         </div>
                         <div class="myinfo-wrap">
                             <div class="form">
-                            <form:form name="regFrm" id="regFrm" action="./pwChange.do" method="post" onsubmit="return (this);">
+                            <form:form name="regFrm" id="regFrm" action="./pwChange.do" method="post" onsubmit="return validateForm(this);">
                                 
                                
                                

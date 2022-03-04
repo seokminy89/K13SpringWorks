@@ -29,7 +29,7 @@
 <script>
 
 	//패스워드 입력 확인
-	
+	function validateForm(frm){
 		if(frm.pass.value==''){
 	        alert('비밀번호를 입력하세요');
 	        frm.pass.focus();
@@ -72,6 +72,7 @@
 	        frm.pass2.focus();
 	        return false;
 	    }
+	}
 		
 	
 </script>
@@ -109,11 +110,11 @@
         <div class="sub-type member">
             <div class="inner-box">
                 <div class="page-title-wrap v2">
-                    <h2 class="page-title">비밀번호 변경</h2>
+                    <h2 class="page-title">패스워드 변경</h2>
                     <div class="depth-area">
                         <ol>
                             <li><a href="/FreeP/index.html">홈</a></li>
-                            <li><strong>비밀번호 변경</strong></li>
+                            <li><strong>패스워드 변경</strong></li>
                         </ol>
                     </div>
                 </div>
@@ -124,18 +125,18 @@
                         </div>
                         <div class="myinfo-wrap">
                             <div class="form">
-                            <form:form name="regFrm" id="regFrm" action="./regAction.do" method="post" onsubmit="return validateForm(this);">
-                                
+                            <form:form name="regFrm" id="regFrm" action="./pwAction.do" method="post" onsubmit="return validateForm(this);">
+                                <input type="hidden" name="phone" value=${phone } />
                                 
                                 <dl>
-                                    <dt class="top">현재 비밀번호</dt>
+                                    <dt class="top">변경할 패스워드</dt>
                                     <dd class="mb">
                                         <div class="form-item number">
                                             <input type="password" name="pass" id="passwd" maxlength="16" placeholder="4~12자 영문,숫자만 사용가능합니다." class="passwd">
                                         </div>
                                         <div class="text-type4" id="passwd_alert" style="display:none;"></div>
                                     </dd>
-                                    <dt class="top">변경할 비밀번호</dt>
+                                    <dt class="top">패스워드 확인</dt>
                                     <dd>
                                         <div class="form-item number">
                                             <input type="password" name="pass2" id="confirmpw" maxlength="16" value="" placeholder="4~12자 영문,숫자만 사용가능합니다." class="passwd">
@@ -145,9 +146,8 @@
                                 </dl>
                                 
                                 
-                                
                                 <div class="btn-wrap">
-                                	<button type="submit" class="btn-type v6" >비밀번호 변경하기</button>
+                                	<button type="submit" class="btn-type v6" >패스워드 변경하기</button>
                             	</div>
                             </form:form></div>
                             

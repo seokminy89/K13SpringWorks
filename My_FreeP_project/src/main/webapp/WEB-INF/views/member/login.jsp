@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="btn-member-wrap" style="margin-bottom:20px">
                                     <span><a href="./findId.do">아이디 찾기</a></span>
-                                    <span id="pw"><a href="./findPw.do">비밀번호 찾기</a></span>
+                                    <span id="pw"><a href="./findPw.do">패스워드 찾기</a></span>
                                 </div>
                             </div>
                             

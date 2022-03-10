@@ -80,6 +80,7 @@
 					 else{
 						 alert("사용 가능한 아이디 입니다.");
 						 flag1 = 1;
+						 $('#passwd').focus();
 					 }
 				 },
 				 error : function(request,statue,error){
@@ -268,6 +269,7 @@ function phoneCheck() {
 					$("#phone2").attr("disabled",false); 
 					$("#phoneChk").attr("disabled",true); 
 					code2 = data; 
+					$('#phone2').focus();
 				} 
 			} 
 		}); 
@@ -287,6 +289,7 @@ function phoneCheck2() {
 			//비밀번호 찾기할 때 window.onload(비밀번호입력할새로만든jsp경로); location.href 둘중 하나 검색해서 해보기.
 			$("#phoneDoubleChk").val("true"); 
 			$("#phone2").attr("disabled",true); 
+			$('#email1').focus();
 		}else{ 
 			alert("인증에 실패했습니다.");
 			$("#phoneDoubleChk").val("false"); 

@@ -50,6 +50,7 @@
 				VALUES (seq_member_num.nextval, #{id}, #{name}, #{pass}, #{phone}, #{email}, #{zipcode}, #{address})
   	</insert>
   	
+  	
   	<!-- 회원가입시 가입축하쿠폰 자동적립. -->
 	<insert id="coupon" parameterType="member.MemberVO">
   		INSERT INTO mycoupon (coupon_idx, m_code, cp_idx)

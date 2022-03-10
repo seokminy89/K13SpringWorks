@@ -28,6 +28,7 @@ public interface MemberImpl {
 	//메인 회원가입
 	public int regAction(MemberVO memberVO);
 	
+	
 	//아이디 중복체크
 	public int idChk(String id) throws Exception;
 	
